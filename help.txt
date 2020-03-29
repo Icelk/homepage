@@ -1,0 +1,119 @@
+erik@EriksDesktop MINGW64 /m/Programming/HTML5/Homepage
+$ git init
+Initialized empty Git repository in M:/Programming/HTML5/Homepage/.git/
+
+erik@EriksDesktop MINGW64 /m/Programming/HTML5/Homepage (master)
+$ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.     
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=<remote>/<branch> master
+
+
+erik@EriksDesktop MINGW64 /m/Programming/HTML5/Homepage (master)
+$ git pull https://github.com/Iselk/homepage.git master
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 624 bytes | 4.00 KiB/s, done.
+From https://github.com/Iselk/homepage
+ * branch            master     -> FETCH_HEAD
+
+erik@EriksDesktop MINGW64 /m/Programming/HTML5/Homepage (master)
+$ git add .
+
+erik@EriksDesktop MINGW64 /m/Programming/HTML5/Homepage (master)
+$ git commit -m "My first commit"
+[master 65c266f] My first commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 yess.txt
+
+erik@EriksDesktop MINGW64 /m/Programming/HTML5/Homepage (master)
+$ git checkout
+
+erik@EriksDesktop MINGW64 /m/Programming/HTML5/Homepage (master)
+$ git checkout help
+error: pathspec 'help' did not match any file(s) known to git
+
+erik@EriksDesktop MINGW64 /m/Programming/HTML5/Homepage (master)
+$ git checkout -b feature
+Switched to a new branch 'feature'
+
+erik@EriksDesktop MINGW64 /m/Programming/HTML5/Homepage (feature)
+$ git add .
+
+erik@EriksDesktop MINGW64 /m/Programming/HTML5/Homepage (feature)
+$ git commit -m "Added function"
+[feature 7d70033] Added function
+ 1 file changed, 4 insertions(+)
+ create mode 100644 script.js
+
+erik@EriksDesktop MINGW64 /m/Programming/HTML5/Homepage (feature)
+$ git checkout master
+Switched to branch 'master'
+
+erik@EriksDesktop MINGW64 /m/Programming/HTML5/Homepage (master)
+$ git brancg
+git: 'brancg' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+
+erik@EriksDesktop MINGW64 /m/Programming/HTML5/Homepage (master)
+$ git branch
+  feature
+* master
+
+erik@EriksDesktop MINGW64 /m/Programming/HTML5/Homepage (master)
+$ git merge 
+fatal: No remote for the current branch.
+
+erik@EriksDesktop MINGW64 /m/Programming/HTML5/Homepage (master)
+$ git merge master
+Already up to date.
+
+erik@EriksDesktop MINGW64 /m/Programming/HTML5/Homepage (master)
+$ git merge feature
+Updating 65c266f..7d70033
+Fast-forward
+ script.js | 4 ++++
+ 1 file changed, 4 insertions(+)
+ create mode 100644 script.js
+
+erik@EriksDesktop MINGW64 /m/Programming/HTML5/Homepage (master)
+$ git branch
+  feature
+* master
+
+erik@EriksDesktop MINGW64 /m/Programming/HTML5/Homepage (master)
+$ git push https://github.com/Iselk/homepage.git master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 643 bytes | 643.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Iselk/homepage.git
+   d560fb8..7d70033  master -> master
+
+erik@EriksDesktop MINGW64 /m/Programming/HTML5/Homepage (master)
+$ git branch
+  feature
+* master
+
+erik@EriksDesktop MINGW64 /m/Programming/HTML5/Homepage (master)
+$ git branch -d feature
+Deleted branch feature (was 7d70033).
+
+erik@EriksDesktop MINGW64 /m/Programming/HTML5/Homepage (master)
+$ git branch
+* master
+
+erik@EriksDesktop MINGW64 /m/Programming/HTML5/Homepage (master)
+$
