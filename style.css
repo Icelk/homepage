@@ -162,7 +162,6 @@ nav
 
 	box-shadow: rgba(2, 8, 20, 0.1) 0 0.175em 0.5em;
 	transform: translateX(-40%);
-	
 	transition: opacity 0.5s ease-out;
 }
 .dropdown-item a
