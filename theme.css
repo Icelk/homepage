@@ -5,6 +5,7 @@
   --bg-primary: #23232e;
   --bg-secondary: #141418;
   --transition-speed: 600ms;
+  --nav-dimensions:  4rem;
 }
 
 .dark {

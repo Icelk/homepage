@@ -161,7 +161,7 @@ body::-webkit-scrollbar-thumb {
 .nav-link {
   display: flex;
   align-items: center;
-  height: 4rem;
+  height: var(--nav-dimensions);
   color: var(--text-primary);
   text-decoration: none;
   filter: grayscale(100%) opacity(0.7);
@@ -183,7 +183,7 @@ body::-webkit-scrollbar-thumb {
 .nav-link svg {
   width: 2rem;
   min-width: 2rem;
-  margin: 0 1rem;
+  margin: 0 calc(calc(var(--nav-dimensions) / 2) - 1rem);
 }
 
 .fa-primary {
@@ -233,7 +233,7 @@ body::-webkit-scrollbar-thumb {
   .navbar {
     bottom: 0;
     width: 100vh;
-    height: 4rem;
+    height: var(--nav-dimensions);
   }
 
   .logo {
@@ -257,12 +257,12 @@ body::-webkit-scrollbar-thumb {
 @media only screen and (min-width: 600px) {
   .navbar {
     top: 0;
-    width: 4rem;
+    width: var(--nav-dimensions);
     height: 100vh;
   }
 
   .navbar:hover {
-    width: 15rem;
+    width: calc(var(--nav-dimensions) + 11rem);
   }
 
   .navbar:hover .link-text {
@@ -271,7 +271,7 @@ body::-webkit-scrollbar-thumb {
 
   .navbar:hover .logo svg
   {
-    margin-left: 12rem;
+    margin-left: calc(var(--nav-dimensions) + 8rem);
   }
 
   .navbar:hover .logo-text
