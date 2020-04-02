@@ -72,10 +72,8 @@ if(localStorage.getItem('hue'))
 	document.getElementById('hueText').innerHTML = (localStorage.getItem('theme') == themes[0]) ? hues[2] : hues[3];
 }
 
-window.onload = () =>
+// Enable animations
+setTimeout(() =>
 {
-	setTimeout(() =>
-	{
-		document.body.classList.remove('loading');
-	}, 50);
-}
+	document.body.classList.remove('loading');
+}, 0);

@@ -1,12 +1,12 @@
 .loading
 {
-  --transition-speed: 0;
+  --transition-speed: 0 !important;
 }
 
 :root
 {
   --transition-speed: .6s;
-  --nav-dimensions:  4rem;
+  --nav-dimensions: 4rem;
 }
 
 .dark
