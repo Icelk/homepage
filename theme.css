@@ -1,6 +1,11 @@
+.loading
+{
+  --transition-speed: 0;
+}
+
 :root
 {
-  --transition-speed: 500ms;
+  --transition-speed: .5s;
   --nav-dimensions:  4rem;
 }
 
@@ -8,6 +13,7 @@
 {
   --text-primary: #b6b6b6;
   --text-secondary: #ececec;
+  --bg-main: #1f1f25;/* WIP */
   --bg-primary: #23232e;
   --bg-secondary: #141418;
 }

@@ -6,8 +6,10 @@
 }
 body
 {
-  color: #1F1F1F;
-  background-color: #9F9F9F;
+  color: var(--text-primary);
+  background-color: var(--bg-main);
+  transition-property: background-color, color;
+  transition-duration: calc(var(--transition-speed) / 2);
   margin: 0;
 }
 
@@ -136,7 +138,7 @@ body::-webkit-scrollbar-thumb {
 .navbar {
   position: fixed;
   background-color: var(--bg-primary);
-  transition: width 600ms ease;
+  transition: background-color calc(var(--transition-speed) / 2), color calc(var(--transition-speed) / 2), width var(--transition-speed) ease;
   overflow: hidden;
 }
 
@@ -152,6 +154,7 @@ body::-webkit-scrollbar-thumb {
 
 .nav-item {
   width: 100%;
+  text-transform: capitalize;
 }
 
 .bottomItem {
@@ -165,7 +168,7 @@ body::-webkit-scrollbar-thumb {
   color: var(--text-primary);
   text-decoration: none;
   filter: grayscale(100%) opacity(0.7);
-  transition: var(--transition-speed);
+  transition: calc(var(--transition-speed) / 4);
 }
 
 .nav-link:hover {
@@ -200,6 +203,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .logo {
+  transition-property: background-color, color;
+  transition-duration: calc(var(--transition-speed) / 2);
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 1rem;
@@ -220,8 +225,8 @@ body::-webkit-scrollbar-thumb {
 {
   display: inline;
   position: absolute;
-  left: -999px;
-  transition: var(--transition-speed);
+  left: -20rem;
+  transition: left var(--transition-speed);
 }
 
 .navbar:hover .logo svg {
