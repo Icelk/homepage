@@ -5,7 +5,7 @@
 
 :root
 {
-  --transition-speed: .5s;
+  --transition-speed: .6s;
   --nav-dimensions:  4rem;
 }
 
@@ -30,6 +30,7 @@
   /* https://coolors.co/fffffa-2b2d42-070c26-7272a3-afafdb */
   --image-primary: #AFAFDB;
   --image-secondary: #7272A3;
+  --transition-speed: .3s;
 }
 
 .light

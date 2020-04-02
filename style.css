@@ -168,7 +168,7 @@ body::-webkit-scrollbar-thumb {
   color: var(--text-primary);
   text-decoration: none;
   filter: grayscale(100%) opacity(0.7);
-  transition: calc(var(--transition-speed) / 4);
+  transition: calc(var(--transition-speed) / 2);
 }
 
 .nav-link:hover {

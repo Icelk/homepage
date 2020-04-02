@@ -77,5 +77,5 @@ window.onload = () =>
 	setTimeout(() =>
 	{
 		document.body.classList.remove('loading');
-	}, 0);
+	}, 50);
 }
