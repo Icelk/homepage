@@ -16,6 +16,8 @@
   --bg-main: #1C1C23;
   --bg-primary: #23232e;
   --bg-secondary: #141418;
+  --image-primary: #ff7eee;
+  --image-secondary: #df49a6;
 }
 .dark.shift
 {
@@ -25,6 +27,9 @@
   --bg-main: #01081C;
   --bg-primary: #070C26;
   --bg-secondary: #2B2D42;
+  /* https://coolors.co/fffffa-2b2d42-070c26-7272a3-afafdb */
+  --image-primary: #AFAFDB;
+  --image-secondary: #7272A3;
 }
 
 .light
@@ -34,6 +39,8 @@
   --bg-main: #f2f2f2;
   --bg-primary: #ffffff;
   --bg-secondary: #e4e4e4;
+  --image-primary: #A5FFB0;
+  --image-secondary: #63C687;
 }
 .light.shift
 {

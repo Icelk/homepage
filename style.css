@@ -191,10 +191,12 @@ body::-webkit-scrollbar-thumb {
 
 .fa-primary {
   color: #ff7eee;
+  color: var(--image-primary);
 }
 
 .fa-secondary {
   color: #df49a6;
+  color: var(--image-secondary);
 }
 
 .fa-primary,
