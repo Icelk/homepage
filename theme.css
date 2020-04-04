@@ -7,6 +7,14 @@
 {
   --transition-speed: .6s;
   --nav-dimensions: 4rem;
+  
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-main: #1C1C23;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+  --image-primary: #ff7eee;
+  --image-secondary: #df49a6;
 }
 
 .dark
