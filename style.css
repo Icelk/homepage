@@ -121,6 +121,7 @@ math.bracket
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
+/* Fireship's CSS */
 /* Scrollbar */
 body::-webkit-scrollbar {
   width: 0.25rem;
@@ -302,4 +303,15 @@ body::-webkit-scrollbar-thumb {
 
 .solar #solarIcon {
   display: block;
+}
+
+/* My CSS */
+.dropdown
+{
+  height: 0px;
+  overflow: hidden;
+  border-left: calc(var(--nav-dimensions) / 8) solid var(--bg-secondary);
+  border-right: calc(var(--nav-dimensions) / 8) solid var(--bg-secondary);
+  background-color: var(--bg-main);
+  transition: background-color calc(var(--transition-speed) / 2), color calc(var(--transition-speed) / 2), height calc(var(--transition-speed)) ease;
 }
