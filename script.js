@@ -52,6 +52,12 @@ function changeHue ()
 	}
 }
 
+// Enable animations
+setTimeout(() =>
+{
+	document.body.classList.remove('loading');
+}, 0);
+
 // Load or define theme setting in localStorage
 if(localStorage.getItem('theme'))
 {
@@ -75,9 +81,3 @@ if(localStorage.getItem('hue'))
 	document.body.classList.add(localStorage.getItem('hue'));
 	document.getElementById('hueText').innerHTML = (localStorage.getItem('theme') == themes[0]) ? hues[2] : hues[3];
 }
-
-// Enable animations
-setTimeout(() =>
-{
-	document.body.classList.remove('loading');
-}, 0);
