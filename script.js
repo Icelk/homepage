@@ -4,6 +4,11 @@ document.getElementById('space').addEventListener('click', () =>
 {
 	document.getElementById('hiddenList').style.height = (document.getElementById('hiddenList').style.height == '0px') ? 'calc(var(--nav-dimensions) * 3)' : '0px';
 });
+document.getElementsByTagName('nav')[0].addEventListener('mouseleave', () =>
+{
+	document.getElementById('hiddenList').style.height = '0px';
+});
+
 
 const themes = ['dark', 'light'];
 const hues = ['normal', 'shift', 'polar', 'solar'];
