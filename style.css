@@ -8,8 +8,7 @@ body
 {
   color: var(--text-primary);
   background-color: var(--bg-main);
-  transition-property: background-color, color;
-  transition-duration: calc(var(--transition-speed) / 2);
+  transition: var(--transition);
   margin: 0;
 }
 
@@ -139,7 +138,7 @@ body::-webkit-scrollbar-thumb {
 .navbar {
   position: fixed;
   background-color: var(--bg-primary);
-  transition: background-color calc(var(--transition-speed) / 2), color calc(var(--transition-speed) / 2), width var(--transition-speed) ease;
+  transition: var(--transition), width var(--transition-speed) ease;
   overflow: hidden;
 }
 
@@ -207,8 +206,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .logo {
-  transition-property: background-color, color;
-  transition-duration: calc(var(--transition-speed) / 2);
+  transition: var(--transition);
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 1rem;
@@ -216,7 +214,7 @@ body::-webkit-scrollbar-thumb {
   color: var(--text-secondary);
   background: var(--bg-secondary);
   font-size: 1.5rem;
-  letter-spacing: 0.3ch;
+  letter-spacing: .3rem;
   width: 100%;
 }
 
@@ -276,10 +274,10 @@ body::-webkit-scrollbar-thumb {
     width: calc(var(--nav-dimensions) + 11rem);
   }
 
-  .navbar:hover .link-text
+  /* .navbar:hover .link-text
   {
-    /* display: inline; */
-  }
+    display: inline;
+  } */
 
   .navbar:hover .logo svg
   {
@@ -316,5 +314,5 @@ body::-webkit-scrollbar-thumb {
   border-left: calc(var(--nav-dimensions) / 8) solid var(--bg-secondary);
   border-right: calc(var(--nav-dimensions) / 8) solid var(--bg-secondary);
   background-color: var(--bg-main);
-  transition: background-color calc(var(--transition-speed) / 2), color calc(var(--transition-speed) / 2), height calc(var(--transition-speed)) ease;
+  transition: var(--transition), height calc(var(--transition-speed)) ease;
 }

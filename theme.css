@@ -7,6 +7,7 @@
 {
   --transition-speed: .6s;
   --nav-dimensions: 4rem;
+  --transition: background-color calc(var(--transition-speed) / 2), color calc(var(--transition-speed) / 2);
   
   --text-primary: #b6b6b6;
   --text-secondary: #ececec;
@@ -39,6 +40,7 @@
   --image-primary: #AFAFDB;
   --image-secondary: #7272A3;
   --transition-speed: .3s;
+  --transition: background-color calc(var(--transition-speed) / 2), color calc(var(--transition-speed) / 2);
 }
 
 .light
