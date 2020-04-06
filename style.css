@@ -316,3 +316,8 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--bg-main);
   transition: var(--transition), height calc(var(--transition-speed)) ease;
 }
+
+main
+{
+  margin-left: calc(var(--nav-dimensions) + 1rem);
+}
