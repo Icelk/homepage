@@ -82,11 +82,11 @@ if(localStorage.getItem('hue'))
 {
 	// Get saved theme
 	document.body.classList.add(localStorage.getItem('hue'));
-	document.getElementById('hueText').innerHTML = (localStorage.getItem('theme') == themes[0]) ? hues[2] : hues[3];
+	document.getElementById('hueText').innerHTML = (localStorage.getItem('hue') === hues[0]) ? (localStorage.getItem('theme') == themes[0]) ? hues[2] : hues[3] : hues[0];
 } else
 {
 	// Set default value
 	localStorage.setItem('hue', hues[0]);
 	document.body.classList.add(localStorage.getItem('hue'));
-	document.getElementById('hueText').innerHTML = (localStorage.getItem('theme') == themes[0]) ? hues[2] : hues[3];
+	document.getElementById('hueText').innerHTML = (localStorage.getItem('hue') === hues[0]) ? (localStorage.getItem('theme') == themes[0]) ? hues[2] : hues[3] : hues[0];
 }
