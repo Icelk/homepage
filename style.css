@@ -321,3 +321,11 @@ main
 {
   margin-left: calc(var(--nav-dimensions) + 1rem);
 }
+
+@media (prefers-color-scheme: dark)
+{
+  :root
+  {
+      content: 'dark';
+  }
+}

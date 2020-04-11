@@ -66,11 +66,13 @@ setTimeout(() =>
 // Load or define theme setting in localStorage
 if(localStorage.getItem('theme'))
 {
+	// Get saved theme
 	document.body.classList.add(localStorage.getItem('theme'));
 	document.getElementById('themeText').innerHTML = (localStorage.getItem('theme') == themes[0]) ? themes[1] : themes[0];
 } else
 {
-	localStorage.setItem('theme', themes[0]);
+	// Set default value depending on preferred theme
+	localStorage.setItem('theme', (window.getComputedStyle(document.documentElement).getPropertyValue('content') === '"dark"') ? themes[0] : themes[1]);
 	document.body.classList.add(localStorage.getItem('theme'));
 	document.getElementById('themeText').innerHTML = (localStorage.getItem('theme') == themes[0]) ? themes[1] : themes[0];
 }
@@ -78,10 +80,12 @@ if(localStorage.getItem('theme'))
 // Load or define hue setting in localStorage
 if(localStorage.getItem('hue'))
 {
+	// Get saved theme
 	document.body.classList.add(localStorage.getItem('hue'));
 	document.getElementById('hueText').innerHTML = (localStorage.getItem('theme') == themes[0]) ? hues[2] : hues[3];
 } else
 {
+	// Set default value
 	localStorage.setItem('hue', hues[0]);
 	document.body.classList.add(localStorage.getItem('hue'));
 	document.getElementById('hueText').innerHTML = (localStorage.getItem('theme') == themes[0]) ? hues[2] : hues[3];
