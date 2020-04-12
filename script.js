@@ -57,18 +57,23 @@ function changeHue ()
 	}
 }
 
-// Enable animations
-setTimeout(() =>
+const init = () =>
 {
-	document.body.classList.remove('loading');
-}, 0);
+	// Enable animations
+	setTimeout(() =>
+	{
+		document.body.classList.remove('loading');
+	}, 0);
 
-// Load or define theme and hue setting
-let storedTheme = localStorage.getItem('theme') || ((window.getComputedStyle(document.documentElement).getPropertyValue('content') === '"light"') ? themes[1] : themes[0]);
-let storedHue = localStorage.getItem('hue') || hues[0];
+	// Load or define theme and hue setting
+	let storedTheme = localStorage.getItem('theme') || ((window.getComputedStyle(document.documentElement).getPropertyValue('content') === '"light"') ? themes[1] : themes[0]);
+	let storedHue = localStorage.getItem('hue') || hues[0];
 
-document.body.classList.add(storedTheme);
-document.getElementById('themeText').innerHTML = (storedTheme === themes[0]) ? themes[1] : themes[0];
+	document.body.classList.add(storedTheme);
+	document.getElementById('themeText').innerHTML = (storedTheme === themes[0]) ? themes[1] : themes[0];
 
-document.body.classList.add(storedHue);
-document.getElementById('hueText').innerHTML = (storedHue === hues[0]) ? (storedTheme === themes[0]) ? hues[2] : hues[3] : hues[0];
+	document.body.classList.add(storedHue);
+	document.getElementById('hueText').innerHTML = (storedHue === hues[0]) ? (storedTheme === themes[0]) ? hues[2] : hues[3] : hues[0];
+}
+
+init();
