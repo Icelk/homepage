@@ -64,8 +64,8 @@ setTimeout(() =>
 }, 0);
 
 // Load or define theme and hue setting
-let storedTheme = (localStorage.getItem('theme')) ? localStorage.getItem('theme') : (window.getComputedStyle(document.documentElement).getPropertyValue('content') === '"light"') ? themes[1] : themes[0];
-let storedHue = (localStorage.getItem('hue')) ? localStorage.getItem('hue') : hues[0];
+let storedTheme = localStorage.getItem('theme') || (window.getComputedStyle(document.documentElement).getPropertyValue('content') === '"light"') ? themes[1] : themes[0];
+let storedHue = localStorage.getItem('hue') || hues[0];
 
 document.body.classList.add(storedTheme);
 document.getElementById('themeText').innerHTML = (storedTheme === themes[0]) ? themes[1] : themes[0];
