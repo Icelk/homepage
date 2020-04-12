@@ -179,7 +179,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .link-text {
-  /* display: none; */
+  display: none;
   margin-left: 1rem;
   white-space: nowrap;
 }
@@ -274,10 +274,10 @@ body::-webkit-scrollbar-thumb {
     width: calc(var(--nav-dimensions) + 11rem);
   }
 
-  /* .navbar:hover .link-text
+  .navbar:hover .link-text
   {
     display: inline;
-  } */
+  }
 
   .navbar:hover .logo svg
   {
