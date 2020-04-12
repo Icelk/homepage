@@ -18,16 +18,8 @@
   --image-secondary: #df49a6;
 }
 
-.dark
-{
-  --text-primary: #b6b6b6;
-  --text-secondary: #ececec;
-  --bg-main: #1C1C23;
-  --bg-primary: #23232e;
-  --bg-secondary: #141418;
-  --image-primary: #ff7eee;
-  --image-secondary: #df49a6;
-}
+/* .dark doesn't exist, since the default is dark. */
+
 .dark.shift
 {
   /* https://coolors.co/fffffa-2b2d42-070c26-01081c-a6cfd5 */
