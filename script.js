@@ -1,5 +1,6 @@
 const themes = ['dark', 'light'];
 const hues = ['normal', 'shift', 'polar', 'solar'];
+const dropdownIDs = ['space'];
 
 const changeTheme = () =>
 {
@@ -76,11 +77,19 @@ init();
 
 document.getElementById('themeButton').addEventListener('click', changeTheme);
 document.getElementById('hueButton').addEventListener('click', changeHue);
-document.getElementById('space').addEventListener('click', () =>
+
+// Loop over dropdowns and add eventlisteners used for extending on click, and retracting when the mouse leaves the navbar
+for(let i = 0; i < dropdownIDs.length; i++)
 {
-	document.getElementById('hiddenList').style.height = (document.getElementById('hiddenList').style.height === '0px') ? 'calc(var(--nav-dimensions) * 3)' : '0px';
-});
-document.getElementsByTagName('nav')[0].addEventListener('mouseleave', () =>
-{
-	document.getElementById('hiddenList').style.height = '0px';
-});
+	let dropdown = document.getElementById(dropdownIDs[i]).nextElementSibling;
+	document.getElementById(dropdownIDs[i]).addEventListener('click', () =>
+	{
+		// @ts-ignore the style property exists
+		dropdown.style.height = (document.getElementById('hiddenList').style.height === '0px') ? 'calc(var(--nav-dimensions) * 3)' : '0px';
+	});
+	document.getElementsByTagName('nav')[0].addEventListener('mouseleave', () =>
+	{
+		// @ts-ignore the style property exists
+		dropdown.style.height = '0px';
+	});
+}
