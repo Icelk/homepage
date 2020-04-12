@@ -1,59 +1,55 @@
-document.getElementById('themeButton').addEventListener('click', changeTheme);
-document.getElementById('hueButton').addEventListener('click', changeHue);
-document.getElementById('space').addEventListener('click', () =>
-{
-	document.getElementById('hiddenList').style.height = (document.getElementById('hiddenList').style.height === '0px') ? 'calc(var(--nav-dimensions) * 3)' : '0px';
-});
-document.getElementsByTagName('nav')[0].addEventListener('mouseleave', () =>
-{
-	document.getElementById('hiddenList').style.height = '0px';
-});
-
-
 const themes = ['dark', 'light'];
 const hues = ['normal', 'shift', 'polar', 'solar'];
 
-function changeTheme ()
+const changeTheme = () =>
 {
-	if(localStorage.getItem('theme') === themes[1])
+	let storedTheme = localStorage.getItem('theme') || ((window.getComputedStyle(document.documentElement).getPropertyValue('content') === '"light"') ? themes[1] : themes[0]);
+	let themeText = document.getElementById('themeText');
+	let hueText = document.getElementById('hueText');
+
+	if(storedTheme === themes[1])
 	{
 		localStorage.setItem('theme', themes[0]);
 		document.body.classList.replace(themes[1], themes[0]);
-		document.getElementById('themeText').innerHTML = themes[1];
-		if(document.getElementById('hueText').innerHTML != hues[0])
+		themeText.innerHTML = themes[1];
+
+		if(hueText.innerHTML !== hues[0])
 		{
-			document.getElementById('hueText').innerHTML = hues[2];
+			hueText.innerHTML = hues[2];
 		}
 	} else
 	{
 		localStorage.setItem('theme', themes[1]);
 		document.body.classList.replace(themes[0], themes[1]);
-		document.getElementById('themeText').innerHTML = themes[0];
-		if(document.getElementById('hueText').innerHTML != hues[0])
+		themeText.innerHTML = themes[0];
+
+		if(hueText.innerHTML !== hues[0])
 		{
-			document.getElementById('hueText').innerHTML = hues[3];
+			hueText.innerHTML = hues[3];
 		}
 	}
 }
 
-function changeHue ()
+const changeHue = () =>
 {
+	let hueText = document.getElementById('hueText');
+
 	if(localStorage.getItem('hue') === hues[1])
 	{
 		localStorage.setItem('hue', hues[0]);
 		document.body.classList.replace(hues[1], hues[0]);
 		if(localStorage.getItem('theme') === themes[0])
 		{
-			document.getElementById('hueText').innerHTML = hues[2];
+			hueText.innerHTML = hues[2];
 		} else
 		{
-			document.getElementById('hueText').innerHTML = hues[3];
+			hueText.innerHTML = hues[3];
 		}
 	} else
 	{
 		localStorage.setItem('hue', hues[1]);
 		document.body.classList.replace(hues[0], hues[1]);
-		document.getElementById('hueText').innerHTML = hues[0];
+		hueText.innerHTML = hues[0];
 	}
 }
 
@@ -77,3 +73,14 @@ const init = () =>
 }
 
 init();
+
+document.getElementById('themeButton').addEventListener('click', changeTheme);
+document.getElementById('hueButton').addEventListener('click', changeHue);
+document.getElementById('space').addEventListener('click', () =>
+{
+	document.getElementById('hiddenList').style.height = (document.getElementById('hiddenList').style.height === '0px') ? 'calc(var(--nav-dimensions) * 3)' : '0px';
+});
+document.getElementsByTagName('nav')[0].addEventListener('mouseleave', () =>
+{
+	document.getElementById('hiddenList').style.height = '0px';
+});
