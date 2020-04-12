@@ -322,10 +322,10 @@ main
   margin-left: calc(var(--nav-dimensions) + 1rem);
 }
 
-@media (prefers-color-scheme: dark)
+@media (prefers-color-scheme: light)
 {
   :root
   {
-      content: 'dark';
+      content: 'light';
   }
 }
