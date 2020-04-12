@@ -17,5 +17,5 @@ git merge \<branch-to-merge> // currently in the branch to merge to
 git branch -d \<branch-to-delete>
 
 ## Push local branch to repo
-git pull origin master // update current master branch to check compatability  
+git pull origin master // not required, but used to update current master branch to check compatability  
 git push origin \<branch-to-push>
