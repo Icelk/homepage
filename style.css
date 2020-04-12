@@ -316,6 +316,10 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--bg-main);
   transition: var(--transition), height calc(var(--transition-speed)) ease;
 }
+.has-dropdown > a
+{
+  cursor: default;
+}
 
 main
 {
