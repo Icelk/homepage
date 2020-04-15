@@ -85,7 +85,7 @@ for(let i = 0; i < dropdownIDs.length; i++)
 	document.getElementById(dropdownIDs[i]).addEventListener('click', () =>
 	{
 		// @ts-ignore the style property exists
-		dropdown.style.height = (document.getElementById('hiddenList').style.height === '0px') ? 'calc(var(--nav-dimensions) * 3)' : '0px';
+		dropdown.style.height = (document.getElementById('hiddenList').style.height === '0px') ? `calc(var(--nav-dimensions) * ${dropdown.children.length})` : '0px';
 	});
 	document.getElementsByTagName('nav')[0].addEventListener('mouseleave', () =>
 	{
