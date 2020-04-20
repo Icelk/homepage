@@ -4,11 +4,11 @@ const dropdownIDs = ['space'];
 
 const changeTheme = () =>
 {
-	let storedTheme = localStorage.getItem('theme') || ((window.getComputedStyle(document.documentElement).getPropertyValue('content') === '"light"') ? themes[1] : themes[0]);
+	let theme = localStorage.getItem('theme') || ((window.getComputedStyle(document.documentElement).getPropertyValue('content') === '"light"') ? themes[1] : themes[0]);
 	let themeText = document.getElementById('themeText');
 	let hueText = document.getElementById('hueText');
 
-	if(storedTheme === themes[1])
+	if(theme === themes[1])
 	{
 		localStorage.setItem('theme', themes[0]);
 		document.body.classList.replace(themes[1], themes[0]);
@@ -33,13 +33,15 @@ const changeTheme = () =>
 
 const changeHue = () =>
 {
+	let theme = localStorage.getItem('theme') || ((window.getComputedStyle(document.documentElement).getPropertyValue('content') === '"light"') ? themes[1] : themes[0]);
+	let hue = localStorage.getItem('hue');
 	let hueText = document.getElementById('hueText');
 
-	if(localStorage.getItem('hue') === hues[1])
+	if(hue === hues[1])
 	{
 		localStorage.setItem('hue', hues[0]);
 		document.body.classList.replace(hues[1], hues[0]);
-		if(localStorage.getItem('theme') === themes[0])
+		if(theme === themes[0])
 		{
 			hueText.innerHTML = hues[2];
 		} else
