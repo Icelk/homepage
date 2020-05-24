@@ -1,9 +1,11 @@
 /* Entire document */
+
 :root
 {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   text-align: justify;
 }
+
 body
 {
   color: var(--text-primary);
@@ -13,11 +15,12 @@ body
 }
 
 /* Select, input, button, and textarea */
+
 select, input, button, textarea
 {
   font-family: inherit;
-  background-color: #DFDFDF;
-  border-color: #7F7F7F;
+  background-color: #dfdfdf;
+  border-color: #7f7f7f;
   pointer-events: initial;
 }
 
@@ -28,6 +31,7 @@ textarea
   border-style: double;
   padding: 0.2em;
 }
+
 select, input, button
 {
   border-width: 0.2em;
@@ -37,6 +41,7 @@ select, input, button
 }
 
 /* Math */
+
 math, .math
 {
   display: inline-block;
@@ -51,21 +56,24 @@ math.bracket
 }
 
 /* Scripts, used on 'div' or 'span'. Defaults to both (use a <br/> to access) or sub, you can use sup to access the upper value */
+
 .script
 {
   display: inline-block;
   font-size: 0.8em;
-  text-align:left;
+  text-align: left;
   vertical-align: -0.5em;
   margin-bottom: -0.25em;
   line-height: 1em;
 }
+
 .script.sup
 {
   vertical-align: 0.5em;
 }
 
 /* Overlay */
+
 .overlay
 {
   position: fixed;
@@ -82,7 +90,9 @@ math.bracket
   margin-left: auto;
   margin-right: auto;
 }
+
 /* Works terribly */
+
 .overlay.left, .overlay.right
 {
   top: 50%;
@@ -95,17 +105,20 @@ math.bracket
   bottom: inherit;
   transform: inherit;
 }
+
 .overlay.bottom
 {
   top: inherit;
   bottom: 0;
   transform: inherit;
 }
+
 .overlay.left
 {
   left: 0;
   right: inherit;
 }
+
 .overlay.right
 {
   right: 0;
@@ -113,6 +126,7 @@ math.bracket
 }
 
 /* SVG animations */
+
 .animatable
 {
   transform: translateZ(0);
@@ -120,29 +134,35 @@ math.bracket
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
-/* Fireship's CSS */
 /* Scrollbar */
-body::-webkit-scrollbar {
+
+body::-webkit-scrollbar
+{
   width: 0.25rem;
 }
 
-body::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track
+{
   background: var(--bg-primary);
 }
 
-body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb
+{
   background: var(--bg-secondary);
 }
 
 /* Navbar */
-.navbar {
+
+.nav
+{
   position: fixed;
   background-color: var(--bg-primary);
   transition: var(--transition), width var(--transition-speed) ease;
   overflow: hidden;
 }
 
-.navbar-nav {
+.navbar
+{
   list-style: none;
   padding: 0;
   margin: 0;
@@ -152,16 +172,19 @@ body::-webkit-scrollbar-thumb {
   height: 100%;
 }
 
-.nav-item {
+.nav-item
+{
   width: 100%;
   text-transform: capitalize;
 }
 
-.bottomItem {
+.bottomItem
+{
   margin-top: auto;
 }
 
-.nav-link {
+.nav-link
+{
   display: flex;
   align-items: center;
   height: var(--nav-dimensions);
@@ -172,40 +195,46 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
 }
 
-.nav-link:hover {
+.nav-link:hover
+{
   filter: grayscale(0%) opacity(1);
   background: var(--bg-secondary);
   color: var(--text-secondary);
 }
 
-.link-text {
+.link-text
+{
   display: none;
   margin-left: 1rem;
   white-space: nowrap;
 }
 
-.nav-link svg {
+.nav-link svg
+{
   width: 2rem;
   min-width: 2rem;
   margin: 0 calc(calc(var(--nav-dimensions) / 2) - 1rem);
 }
 
-.fa-primary {
+.fa-primary
+{
   color: #ff7eee;
   color: var(--image-primary);
 }
 
-.fa-secondary {
+.fa-secondary
+{
   color: #df49a6;
   color: var(--image-secondary);
 }
 
-.fa-primary,
-.fa-secondary {
+.fa-primary, .fa-secondary
+{
   transition: var(--transition-speed);
 }
 
-.logo {
+.logo
+{
   transition: var(--transition);
   font-weight: bold;
   text-transform: uppercase;
@@ -214,11 +243,12 @@ body::-webkit-scrollbar-thumb {
   color: var(--text-secondary);
   background: var(--bg-secondary);
   font-size: 1.5rem;
-  letter-spacing: .3rem;
+  letter-spacing: 0.3rem;
   width: 100%;
 }
 
-.logo svg {
+.logo svg
+{
   transform: rotate(0deg);
   transition: var(--transition-speed);
 }
@@ -231,105 +261,113 @@ body::-webkit-scrollbar-thumb {
   transition: left var(--transition-speed);
 }
 
-.navbar:hover .logo svg {
+.nav:hover .logo svg
+{
   transform: rotate(-180deg);
 }
 
-/* Small screens */
-@media only screen and (max-width: 600px) {
-  .navbar {
-    bottom: 0;
-    width: 100vh;
-    height: var(--nav-dimensions);
-  }
-
-  .logo {
-    display: none;
-  }
-
-  .navbar-nav {
-    flex-direction: row;
-  }
-
-  .nav-link {
-    justify-content: center;
-  }
-
-  main {
-    margin: 0;
-  }
+main
+{
+  margin-left: 1em;
 }
 
-/* Large screens */
-@media only screen and (min-width: 600px) {
-  .navbar {
-    top: 0;
-    width: var(--nav-dimensions);
-    height: 100vh;
-  }
-
-  /* animation speed? */
-  .navbar:hover
-  {
-    width: calc(var(--nav-dimensions) + 11rem);
-  }
-
-  .navbar:hover .link-text
-  {
-    display: inline;
-  }
-
-  .navbar:hover .logo svg
-  {
-    margin-left: calc(var(--nav-dimensions) + 8rem);
-  }
-
-  .navbar:hover .logo-text
-  {
-    left: 0px;
-  }
-}
-
-.theme-icon {
-  display: none;
-}
-
-.dark #darkIcon {
-  display: block;
-}
-
-.light #lightIcon {
-  display: block;
-}
-
-.solar #solarIcon {
-  display: block;
-}
-
-/* My CSS */
 .dropdown
 {
-  height: 0px;
+  height: 0;
   overflow: hidden;
   border-left: calc(var(--nav-dimensions) / 8) solid var(--bg-secondary);
   border-right: calc(var(--nav-dimensions) / 8) solid var(--bg-secondary);
   background-color: var(--bg-main);
   transition: var(--transition), height calc(var(--transition-speed)) ease;
 }
+
 .has-dropdown > a
 {
   cursor: default;
 }
 
-main
+/* Small screens */
+@media only screen and (max-width: 600px)
 {
-  margin-left: calc(var(--nav-dimensions) + 1rem);
+  .nav
+  {
+    bottom: 0;
+    width: 100%;
+    height: var(--nav-dimensions);
+  }
+  .logo
+  {
+    display: none;
+  }
+  .navbar
+  {
+    flex-direction: row;
+  }
+  .nav-link
+  {
+    justify-content: center;
+  }
+  .has-dropdown
+  {
+    display: none;
+  }
+}
+
+/* Large screens */
+@media only screen and (min-width: 600px)
+{
+  .nav
+  {
+    top: 0;
+    width: var(--nav-dimensions);
+    height: 100vh;
+  }
+  .nav:hover
+  {
+    width: calc(var(--nav-dimensions) + 11rem);
+  }
+  .nav:hover .link-text
+  {
+    display: inline;
+  }
+  .nav:hover .logo svg
+  {
+    margin-left: calc(var(--nav-dimensions) + 8rem);
+  }
+  .nav:hover .logo-text
+  {
+    left: 0;
+  }
+  main
+  {
+    margin-left: calc(var(--nav-dimensions) + 1rem);
+  }
+}
+
+.theme-icon
+{
+  display: none;
+}
+
+.dark #darkIcon
+{
+  display: block;
+}
+
+.light #lightIcon
+{
+  display: block;
+}
+
+.solar #solarIcon
+{
+  display: block;
 }
 
 @media (prefers-color-scheme: light)
 {
   :root
   {
-      content: 'light';
+    content: "light";
   }
 }
